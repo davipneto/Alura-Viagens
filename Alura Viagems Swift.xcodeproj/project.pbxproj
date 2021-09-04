@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		53996F2A26E3B91400C23207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2926E3B91400C23207 /* AppDelegate.swift */; };
 		53996F2C26E3B91400C23207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2B26E3B91400C23207 /* SceneDelegate.swift */; };
-		53996F2E26E3B91400C23207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2D26E3B91400C23207 /* ViewController.swift */; };
+		53996F2E26E3B91400C23207 /* AluraviagensHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */; };
 		53996F3126E3B91400C23207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53996F2F26E3B91400C23207 /* Main.storyboard */; };
 		53996F3326E3B92D00C23207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53996F3226E3B92D00C23207 /* Assets.xcassets */; };
 		53996F3626E3B92D00C23207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */; };
+		53996F3E26E3CCE300C23207 /* ViagemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53996F2626E3B91400C23207 /* Alura Viagems Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alura Viagems Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53996F2926E3B91400C23207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53996F2B26E3B91400C23207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53996F2D26E3B91400C23207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AluraviagensHomeViewController.swift; sourceTree = "<group>"; };
 		53996F3026E3B91400C23207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53996F3226E3B92D00C23207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53996F3526E3B92D00C23207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53996F3726E3B92D00C23207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				53996F2926E3B91400C23207 /* AppDelegate.swift */,
 				53996F2B26E3B91400C23207 /* SceneDelegate.swift */,
-				53996F2D26E3B91400C23207 /* ViewController.swift */,
+				53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */,
 				53996F2F26E3B91400C23207 /* Main.storyboard */,
 				53996F3226E3B92D00C23207 /* Assets.xcassets */,
 				53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */,
 				53996F3726E3B92D00C23207 /* Info.plist */,
+				53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */,
 			);
 			path = "Alura Viagems Swift";
 			sourceTree = "<group>";
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53996F2E26E3B91400C23207 /* ViewController.swift in Sources */,
+				53996F3E26E3CCE300C23207 /* ViagemTableViewCell.swift in Sources */,
+				53996F2E26E3B91400C23207 /* AluraviagensHomeViewController.swift in Sources */,
 				53996F2A26E3B91400C23207 /* AppDelegate.swift in Sources */,
 				53996F2C26E3B91400C23207 /* SceneDelegate.swift in Sources */,
 			);
