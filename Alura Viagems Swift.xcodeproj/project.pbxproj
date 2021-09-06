@@ -14,6 +14,9 @@
 		53996F3326E3B92D00C23207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53996F3226E3B92D00C23207 /* Assets.xcassets */; };
 		53996F3626E3B92D00C23207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */; };
 		53996F3E26E3CCE300C23207 /* ViagemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */; };
+		D839C4C426E6B1510023A1B4 /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D839C4C326E6B1510023A1B4 /* Viagem.swift */; };
+		D839C4C726E6C0690023A1B4 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D839C4C526E6C0690023A1B4 /* CityTableViewCell.swift */; };
+		D839C4C826E6C0690023A1B4 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		53996F3526E3B92D00C23207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53996F3726E3B92D00C23207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemTableViewCell.swift; sourceTree = "<group>"; };
+		D839C4C326E6B1510023A1B4 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
+		D839C4C526E6C0690023A1B4 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */,
 				53996F3726E3B92D00C23207 /* Info.plist */,
 				53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */,
+				D839C4C326E6B1510023A1B4 /* Viagem.swift */,
+				D839C4C526E6C0690023A1B4 /* CityTableViewCell.swift */,
+				D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */,
 			);
 			path = "Alura Viagems Swift";
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 			files = (
 				53996F3626E3B92D00C23207 /* LaunchScreen.storyboard in Resources */,
 				53996F3326E3B92D00C23207 /* Assets.xcassets in Resources */,
+				D839C4C826E6C0690023A1B4 /* CityTableViewCell.xib in Resources */,
 				53996F3126E3B91400C23207 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,10 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D839C4C726E6C0690023A1B4 /* CityTableViewCell.swift in Sources */,
 				53996F3E26E3CCE300C23207 /* ViagemTableViewCell.swift in Sources */,
 				53996F2E26E3B91400C23207 /* AluraviagensHomeViewController.swift in Sources */,
 				53996F2A26E3B91400C23207 /* AppDelegate.swift in Sources */,
 				53996F2C26E3B91400C23207 /* SceneDelegate.swift in Sources */,
+				D839C4C426E6B1510023A1B4 /* Viagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
