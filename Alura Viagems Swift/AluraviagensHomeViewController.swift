@@ -21,6 +21,7 @@ class AluraviagensHomeViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupTableView()
+        setupHeader()
     }
 
     private func setupView() {
@@ -35,6 +36,10 @@ class AluraviagensHomeViewController: UIViewController {
         
         let cityNib = UINib(nibName: "CityTableViewCell", bundle: nil)
         tableView.register(cityNib, forCellReuseIdentifier: CityTableViewCell.identifier)
+    }
+    
+    private func setupHeader() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
@@ -89,5 +94,13 @@ extension AluraviagensHomeViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1,
+              let pacoteViewController = self.storyboard?.instantiateViewController(withIdentifier: "pacoteViewController") as? PacotesCollectionViewController else { return }
+        let city = cities[indexPath.row]
+        pacoteViewController.city = city
+        self.navigationController?.pushViewController(pacoteViewController, animated: true)
     }
 }
