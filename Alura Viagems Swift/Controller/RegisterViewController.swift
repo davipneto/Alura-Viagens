@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class RegisterViewController: UIViewController, ImagePickerDelegate {
     let imagePicker = ImagePicker()
@@ -25,10 +26,11 @@ class RegisterViewController: UIViewController, ImagePickerDelegate {
     @IBAction func takePic(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = imagePicker
-        
         let alert = imagePicker.showPickerOptions { sourceType in
             imagePickerController.sourceType = sourceType
-            self.present(imagePickerController, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
         }
         present(alert, animated: true, completion: nil)
     }

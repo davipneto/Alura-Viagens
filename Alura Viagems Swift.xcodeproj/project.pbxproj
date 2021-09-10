@@ -74,24 +74,48 @@
 		53996F2826E3B91400C23207 /* Alura Viagems Swift */ = {
 			isa = PBXGroup;
 			children = (
+				D864C00F26EAFABE0040264B /* Model */,
+				D864C00E26EAFAB90040264B /* Controller */,
+				D864C00D26EAFAB40040264B /* View */,
 				53996F2926E3B91400C23207 /* AppDelegate.swift */,
 				53996F2B26E3B91400C23207 /* SceneDelegate.swift */,
-				53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */,
-				53996F2F26E3B91400C23207 /* Main.storyboard */,
-				D815703D26E9650500444F21 /* PacotesSearchViewController.swift */,
-				D815703B26E9553100444F21 /* PacoteCollectionViewCell.swift */,
-				D815703926E94FE000444F21 /* PacotesCollectionViewController.swift */,
 				53996F3226E3B92D00C23207 /* Assets.xcassets */,
-				53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */,
 				53996F3726E3B92D00C23207 /* Info.plist */,
-				53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */,
-				D839C4C326E6B1510023A1B4 /* Viagem.swift */,
-				D839C4C526E6C0690023A1B4 /* CityTableViewCell.swift */,
-				D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */,
-				D864C00926EAB02B0040264B /* RegisterViewController.swift */,
-				D864C00B26EAB8230040264B /* ImagePicker.swift */,
 			);
 			path = "Alura Viagems Swift";
+			sourceTree = "<group>";
+		};
+		D864C00D26EAFAB40040264B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D815703B26E9553100444F21 /* PacoteCollectionViewCell.swift */,
+				53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */,
+				D839C4C526E6C0690023A1B4 /* CityTableViewCell.swift */,
+				D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */,
+				53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */,
+				53996F2F26E3B91400C23207 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D864C00E26EAFAB90040264B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */,
+				D815703D26E9650500444F21 /* PacotesSearchViewController.swift */,
+				D815703926E94FE000444F21 /* PacotesCollectionViewController.swift */,
+				D864C00926EAB02B0040264B /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D864C00F26EAFABE0040264B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D839C4C326E6B1510023A1B4 /* Viagem.swift */,
+				D864C00B26EAB8230040264B /* ImagePicker.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,14 +346,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TPJU9X6D2;
 				INFOPLIST_FILE = "Alura Viagems Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davi.Alura-Viagems-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davipneto.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,14 +367,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TPJU9X6D2;
 				INFOPLIST_FILE = "Alura Viagems Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davi.Alura-Viagems-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davipneto.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

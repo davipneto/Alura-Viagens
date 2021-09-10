@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 protocol ImagePickerDelegate {
     func didPickImage(_ image: UIImage)
@@ -31,5 +32,11 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         guard let image = info[.originalImage] as? UIImage else { return }
         delegate?.didPickImage(image)
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func requestLibraryAccess() {
+        PHPhotoLibrary.requestAuthorization { _ in
+            
+        }
     }
 }
