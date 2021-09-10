@@ -232,7 +232,7 @@
                             <constraint firstAttribute="bottom" secondItem="qTT-nL-drq" secondAttribute="bottom" id="uLl-RP-XQd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Viagens" id="QJb-K9-GT6"/>
+                    <tabBarItem key="tabBarItem" title="Viagens" image="icon" selectedImage="icon-filled" id="QJb-K9-GT6"/>
                     <navigationItem key="navigationItem" id="nR6-6F-O4h"/>
                     <connections>
                         <outlet property="pacotesView" destination="hka-J6-g62" id="pwx-6z-7wq"/>
@@ -255,7 +255,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QD7-4V-Rzs"/>
-                        <segue destination="fos-Ee-1Sp" kind="relationship" relationship="viewControllers" id="bMN-YQ-Wwr"/>
+                        <segue destination="3rh-vg-8o5" kind="relationship" relationship="viewControllers" id="cPK-5n-ojd"/>
+                        <segue destination="3Fv-3V-9u3" kind="relationship" relationship="viewControllers" id="sVB-dL-UjP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8r-Wv-M6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -345,11 +346,103 @@
                             <outlet property="delegate" destination="7mX-09-pD1" id="Wyb-s8-2rd"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Pacotes" id="yg8-AS-xrV"/>
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon" selectedImage="icon-filled" id="yg8-AS-xrV"/>
+                    <navigationItem key="navigationItem" title="Pacotes" largeTitleDisplayMode="always" id="KEW-w6-Whc"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d54-ch-eeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="37"/>
+            <point key="canvasLocation" x="1400" y="48"/>
+        </scene>
+        <!--Pacotes-->
+        <scene sceneID="Mtv-Ys-OBU">
+            <objects>
+                <navigationController id="3rh-vg-8o5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon" selectedImage="icon-filled" id="l6h-uM-guI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ehy-U7-EyB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7mX-09-pD1" kind="relationship" relationship="rootViewController" id="SUf-d2-FUj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFT-i9-jM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="37"/>
+        </scene>
+        <!--Cadastro-->
+        <scene sceneID="gpU-FG-IEw">
+            <objects>
+                <viewController id="3Fv-3V-9u3" customClass="RegisterViewController" customModule="Alura_Viagems_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ud0-tm-nl5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AJV-E6-muD">
+                                <rect key="frame" x="157" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="QoL-eR-TBz"/>
+                                    <constraint firstAttribute="width" constant="100" id="Rcb-bv-0aD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-rJ-bVs">
+                                <rect key="frame" x="191.5" y="119" width="31" height="30"/>
+                                <state key="normal" title="Foto"/>
+                                <connections>
+                                    <action selector="takePic:" destination="3Fv-3V-9u3" eventType="touchUpInside" id="KrZ-Ow-R1u"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-Ge-dvW">
+                                <rect key="frame" x="30" y="244" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Lbr-a7-ifU"/>
+                                    <constraint firstAttribute="width" constant="200" id="MRi-Ka-tKj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-n7-aTR">
+                                <rect key="frame" x="185.5" y="355" width="43" height="30"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="save:" destination="3Fv-3V-9u3" eventType="touchUpInside" id="n88-8V-juh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b3E-9v-2nn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cp9-Ge-dvW" firstAttribute="leading" secondItem="b3E-9v-2nn" secondAttribute="leading" constant="30" id="7JA-Av-LgY"/>
+                            <constraint firstItem="hcx-n7-aTR" firstAttribute="top" secondItem="Cp9-Ge-dvW" secondAttribute="bottom" constant="77" id="Ax8-KK-HhX"/>
+                            <constraint firstItem="hcx-n7-aTR" firstAttribute="centerX" secondItem="b3E-9v-2nn" secondAttribute="centerX" id="F3h-dH-1jw"/>
+                            <constraint firstItem="A9z-rJ-bVs" firstAttribute="centerX" secondItem="AJV-E6-muD" secondAttribute="centerX" id="Ftz-nA-XXU"/>
+                            <constraint firstItem="AJV-E6-muD" firstAttribute="top" secondItem="b3E-9v-2nn" secondAttribute="top" constant="40" id="NzG-Vd-cIr"/>
+                            <constraint firstItem="Cp9-Ge-dvW" firstAttribute="top" secondItem="b3E-9v-2nn" secondAttribute="top" constant="200" id="XMY-aW-zzN"/>
+                            <constraint firstItem="AJV-E6-muD" firstAttribute="centerX" secondItem="b3E-9v-2nn" secondAttribute="centerX" id="YSH-w0-0vF"/>
+                            <constraint firstItem="A9z-rJ-bVs" firstAttribute="centerY" secondItem="AJV-E6-muD" secondAttribute="centerY" id="dxq-2e-kRd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cadastro" id="9dS-Wc-wKn"/>
+                    <connections>
+                        <outlet property="getPicButton" destination="A9z-rJ-bVs" id="ktr-g3-ExS"/>
+                        <outlet property="nameTextField" destination="Cp9-Ge-dvW" id="sAr-u6-BIN"/>
+                        <outlet property="picImageView" destination="AJV-E6-muD" id="35c-wy-aiI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbu-ik-88S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="893"/>
         </scene>
         <!--Pacotes-->
         <scene sceneID="mMw-qC-Gyc">
@@ -364,7 +457,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-Rp-yKm">
-                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cHo-ml-PVY">
                                     <size key="itemSize" width="128" height="128"/>
@@ -450,7 +543,7 @@
                             <constraint firstItem="bsL-ls-rWs" firstAttribute="bottom" secondItem="cxq-Rp-yKm" secondAttribute="bottom" id="gI8-9a-d9r"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pacotes" id="1v7-PN-juH"/>
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon" selectedImage="icon-filled" id="1v7-PN-juH"/>
                     <connections>
                         <outlet property="collectionView" destination="cxq-Rp-yKm" id="psJ-LO-sPI"/>
                         <outlet property="searchBar" destination="IC7-vl-5g2" id="cbn-6h-iHy"/>
@@ -458,15 +551,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byA-0D-r8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="85"/>
+            <point key="canvasLocation" x="1925" y="927"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon" width="24" height="24"/>
+        <image name="icon-filled" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

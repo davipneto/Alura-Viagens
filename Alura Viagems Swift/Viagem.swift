@@ -7,11 +7,18 @@
 
 import UIKit
 
-struct Viagem {
-    var destiny: String
+class Viagem: NSObject {
+    @objc var destiny: String
     var duration: String
     var price: Double
     var image: UIImage?
+    
+    init(destiny: String, duration: String, price: Double, image: UIImage?) {
+        self.destiny = destiny
+        self.duration = duration
+        self.price = price
+        self.image = image
+    }
     
     static func getViagens() -> [Viagem] {
         let image = UIImage(named: "rio-de-janeiro")

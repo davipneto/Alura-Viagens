@@ -100,7 +100,7 @@ extension AluraviagensHomeViewController: UITableViewDelegate, UITableViewDataSo
         guard indexPath.section == 1,
               let pacoteViewController = self.storyboard?.instantiateViewController(withIdentifier: "pacoteViewController") as? PacotesCollectionViewController else { return }
         let city = cities[indexPath.row]
-        pacoteViewController.city = city
+        //pacoteViewController.city = city
         self.navigationController?.pushViewController(pacoteViewController, animated: true)
     }
 }

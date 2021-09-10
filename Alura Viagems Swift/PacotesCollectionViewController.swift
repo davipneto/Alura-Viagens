@@ -9,15 +9,16 @@ import UIKit
 
 private let reuseIdentifier = "pacoteCell"
 
-class PacotesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+enum PriceRange: String, CaseIterable {
+    case lessThan100 = "< 100"
+    case between100and600 = "> 100 & < 600"
+    case moreThan600 = "> 600"
+}
+
+class PacotesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchResultsUpdating {
     
     let pacotes = Viagem.getPacotes()
     var pacotesFiltered = [Viagem]()
-    var city: String? {
-        didSet {
-            filterCity()
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +27,13 @@ class PacotesCollectionViewController: UICollectionViewController, UICollectionV
     }
     
     private func setupHeader() {
-        title = "Pacotes"
-        navigationItem.largeTitleDisplayMode = .always
-    }
-    
-    private func filterCity() {
-        guard let city = city else { return }
-        pacotesFiltered = pacotes.filter { $0.destiny == city }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Filtrar Pacotes"
+        searchController.searchBar.scopeButtonTitles = PriceRange.allCases.map { $0.rawValue }
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 
     // MARK: UICollectionViewDataSource
@@ -53,13 +44,16 @@ class PacotesCollectionViewController: UICollectionViewController, UICollectionV
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return pacotesFiltered.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PacoteCollectionViewCell else { return UICollectionViewCell() }
-        cell.viagem = pacotesFiltered[indexPath.item]
+        
+        let index = indexPath.item
+        let viagem = pacotesFiltered[index]
+        
+        cell.viagem = viagem
         cell.layer.cornerRadius = 8
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.systemGray.cgColor
@@ -80,4 +74,37 @@ class PacotesCollectionViewController: UICollectionViewController, UICollectionV
         return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
 
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        
+        let index = searchController.searchBar.selectedScopeButtonIndex
+        let priceRange = PriceRange.allCases[index]
+        
+        var pacotesPriceRange = pacotes
+        
+        switch priceRange {
+        case .lessThan100:
+            pacotesPriceRange = pacotes.filter { $0.price < 100 }
+        case .between100and600:
+            pacotesPriceRange = pacotes.filter { $0.price >= 100 && $0.price <= 600 }
+        case .moreThan600:
+            pacotesPriceRange = pacotes.filter { $0.price > 600 }
+        }
+        
+        if text.isEmpty {
+            self.pacotesFiltered = pacotesPriceRange
+            collectionView.reloadData()
+            return
+        }
+    
+//        self.pacotesFiltered = pacotes
+//            .filter { $0.destiny.range(of: text, options: .init([.caseInsensitive, .diacriticInsensitive])) != nil }
+//        collectionView.reloadData()
+        
+        let predicate = NSPredicate(format: "destiny CONTAINS[cd] %@", text)
+        if let pacotesFiltered = (pacotesPriceRange as NSArray).filtered(using: predicate) as? [Viagem] {
+            self.pacotesFiltered = pacotesFiltered
+            collectionView.reloadData()
+        }
+    }
 }
