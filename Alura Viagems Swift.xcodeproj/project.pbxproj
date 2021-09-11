@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B9ED6E98184D4C6F75006A6 /* Pods_Alura_Viagems_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D9A2E5667716B48B5F3BFE /* Pods_Alura_Viagems_Swift.framework */; };
 		53996F2A26E3B91400C23207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2926E3B91400C23207 /* AppDelegate.swift */; };
 		53996F2C26E3B91400C23207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2B26E3B91400C23207 /* SceneDelegate.swift */; };
 		53996F2E26E3B91400C23207 /* AluraviagensHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53996F2D26E3B91400C23207 /* AluraviagensHomeViewController.swift */; };
@@ -22,6 +23,9 @@
 		D839C4C826E6C0690023A1B4 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */; };
 		D864C00A26EAB02B0040264B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864C00926EAB02B0040264B /* RegisterViewController.swift */; };
 		D864C00C26EAB8230040264B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864C00B26EAB8230040264B /* ImagePicker.swift */; };
+		D870E69B26EBFC4100E7EE39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870E69A26EBFC4100E7EE39 /* User.swift */; };
+		D870E69D26EC067000E7EE39 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870E69C26EC067000E7EE39 /* UserTableViewCell.swift */; };
+		D870E6A026EC085D00E7EE39 /* ReqresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870E69F26EC085D00E7EE39 /* ReqresAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,8 @@
 		53996F3526E3B92D00C23207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53996F3726E3B92D00C23207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53996F3D26E3CCE300C23207 /* ViagemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemTableViewCell.swift; sourceTree = "<group>"; };
+		73D9A2E5667716B48B5F3BFE /* Pods_Alura_Viagems_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alura_Viagems_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF53757CA623C3352DB666F /* Pods-Alura Viagems Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alura Viagems Swift.debug.xcconfig"; path = "Target Support Files/Pods-Alura Viagems Swift/Pods-Alura Viagems Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		D815703926E94FE000444F21 /* PacotesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesCollectionViewController.swift; sourceTree = "<group>"; };
 		D815703B26E9553100444F21 /* PacoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		D815703D26E9650500444F21 /* PacotesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesSearchViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +48,10 @@
 		D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		D864C00926EAB02B0040264B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D864C00B26EAB8230040264B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D870E69A26EBFC4100E7EE39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D870E69C26EC067000E7EE39 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		D870E69F26EC085D00E7EE39 /* ReqresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqresAPI.swift; sourceTree = "<group>"; };
+		F8B97ACDE9AE5ECAEC58C5C0 /* Pods-Alura Viagems Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alura Viagems Swift.release.xcconfig"; path = "Target Support Files/Pods-Alura Viagems Swift/Pods-Alura Viagems Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9ED6E98184D4C6F75006A6 /* Pods_Alura_Viagems_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +71,8 @@
 			children = (
 				53996F2826E3B91400C23207 /* Alura Viagems Swift */,
 				53996F2726E3B91400C23207 /* Products */,
+				95FEE60B9F269A1ED679183E /* Pods */,
+				8175C13647F57BA21BEABFB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +87,7 @@
 		53996F2826E3B91400C23207 /* Alura Viagems Swift */ = {
 			isa = PBXGroup;
 			children = (
+				D870E69E26EC083F00E7EE39 /* Resources */,
 				D864C00F26EAFABE0040264B /* Model */,
 				D864C00E26EAFAB90040264B /* Controller */,
 				D864C00D26EAFAB40040264B /* View */,
@@ -85,6 +99,23 @@
 			path = "Alura Viagems Swift";
 			sourceTree = "<group>";
 		};
+		8175C13647F57BA21BEABFB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73D9A2E5667716B48B5F3BFE /* Pods_Alura_Viagems_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95FEE60B9F269A1ED679183E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EF53757CA623C3352DB666F /* Pods-Alura Viagems Swift.debug.xcconfig */,
+				F8B97ACDE9AE5ECAEC58C5C0 /* Pods-Alura Viagems Swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D864C00D26EAFAB40040264B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +125,7 @@
 				D839C4C626E6C0690023A1B4 /* CityTableViewCell.xib */,
 				53996F3426E3B92D00C23207 /* LaunchScreen.storyboard */,
 				53996F2F26E3B91400C23207 /* Main.storyboard */,
+				D870E69C26EC067000E7EE39 /* UserTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,8 +146,17 @@
 			children = (
 				D839C4C326E6B1510023A1B4 /* Viagem.swift */,
 				D864C00B26EAB8230040264B /* ImagePicker.swift */,
+				D870E69A26EBFC4100E7EE39 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D870E69E26EC083F00E7EE39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D870E69F26EC085D00E7EE39 /* ReqresAPI.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53996F3A26E3B92D00C23207 /* Build configuration list for PBXNativeTarget "Alura Viagems Swift" */;
 			buildPhases = (
+				5A443ED89CBDC757E57B028A /* [CP] Check Pods Manifest.lock */,
 				53996F2226E3B91400C23207 /* Sources */,
 				53996F2326E3B91400C23207 /* Frameworks */,
 				53996F2426E3B91400C23207 /* Resources */,
+				D5DF514D564AB2F2300BBCE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +227,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A443ED89CBDC757E57B028A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alura Viagems Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5DF514D564AB2F2300BBCE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alura Viagems Swift/Pods-Alura Viagems Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alura Viagems Swift/Pods-Alura Viagems Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alura Viagems Swift/Pods-Alura Viagems Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53996F2226E3B91400C23207 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -193,10 +278,13 @@
 				D864C00A26EAB02B0040264B /* RegisterViewController.swift in Sources */,
 				53996F3E26E3CCE300C23207 /* ViagemTableViewCell.swift in Sources */,
 				53996F2E26E3B91400C23207 /* AluraviagensHomeViewController.swift in Sources */,
+				D870E69D26EC067000E7EE39 /* UserTableViewCell.swift in Sources */,
 				53996F2A26E3B91400C23207 /* AppDelegate.swift in Sources */,
+				D870E6A026EC085D00E7EE39 /* ReqresAPI.swift in Sources */,
 				D815703E26E9650500444F21 /* PacotesSearchViewController.swift in Sources */,
 				D815703C26E9553100444F21 /* PacoteCollectionViewCell.swift in Sources */,
 				D864C00C26EAB8230040264B /* ImagePicker.swift in Sources */,
+				D870E69B26EBFC4100E7EE39 /* User.swift in Sources */,
 				53996F2C26E3B91400C23207 /* SceneDelegate.swift in Sources */,
 				D839C4C426E6B1510023A1B4 /* Viagem.swift in Sources */,
 				D815703A26E94FE000444F21 /* PacotesCollectionViewController.swift in Sources */,
@@ -343,6 +431,7 @@
 		};
 		53996F3B26E3B92D00C23207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF53757CA623C3352DB666F /* Pods-Alura Viagems Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -364,6 +453,7 @@
 		};
 		53996F3C26E3B92D00C23207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B97ACDE9AE5ECAEC58C5C0 /* Pods-Alura Viagems Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

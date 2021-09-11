@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import AVFoundation
 
 protocol ImagePickerDelegate {
     func didPickImage(_ image: UIImage)
@@ -35,8 +36,15 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
     }
     
     func requestLibraryAccess() {
-        PHPhotoLibrary.requestAuthorization { _ in
-            
-        }
+        
+//        PHPhotoLibrary.requestAuthorization { _ in
+//            
+//        }
+//        
+//        AVCaptureDevice.authorizationStatus(for: .video)
+//        
+//        AVCaptureDevice.requestAccess(for: .video) { _ in
+//            
+//        }
     }
 }
